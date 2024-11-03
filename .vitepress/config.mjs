@@ -5,11 +5,11 @@ export default defineConfig({
 	base: '/JeShoNg-Docs/',
 	srcDir: './src',
 	cleanUrls: true,
-	head: [['link', { rel: 'icon', href: 'assets/logo.svg' }]],
+	head: [['link', { rel: 'icon', href: '/assets/logo.svg' }]],
 	title: 'JeSho Ng Docs',
 	description: 'JeSho Ng Docs',
 	themeConfig: {
-		logo: 'assets/logo.svg',
+		logo: '/assets/logo.svg',
 		outlineTitle: '文章目录',
 		outline: [2, 6],
 		nav: [
