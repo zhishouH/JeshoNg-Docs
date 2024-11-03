@@ -1,15 +1,15 @@
 import { defineConfig } from 'vitepress'
-import { set_sidebar } from '../src/utils/auto-generated-sidebars.mjs'
+import { set_sidebar } from './utils/auto-generated-sidebars.mjs'
 
 export default defineConfig({
 	base: '/JeShoNg-Docs/',
 	srcDir: './src',
 	cleanUrls: true,
-	head: [['link', { rel: 'icon', href: '/assets/logo.svg' }]],
+	head: [['link', { rel: 'icon', href: './logo.svg' }]],
 	title: 'JeSho Ng Docs',
 	description: 'JeSho Ng Docs',
 	themeConfig: {
-		logo: '/assets/logo.svg',
+		logo: '/logo.svg',
 		outlineTitle: '文章目录',
 		outline: [2, 6],
 		nav: [
@@ -56,7 +56,6 @@ export default defineConfig({
 			'/frameworks/koa': set_sidebar('/frameworks/koa'),
 			'/back-end/node': set_sidebar('/back-end/node'),
 			'/back-end/mysql': set_sidebar('/back-end/mysql'),
-			// '/sundries': set_sidebar('/back-end/mysql'),
 			'/sundries': {
 				collapsed: true,
 				items: [
@@ -67,8 +66,7 @@ export default defineConfig({
 		},
 		socialLinks: [{ icon: 'github', link: 'https://github.com/zhishouH' }],
 		footer: {
-			copyright:
-				'©2024 huangzhishou.com版权所有 <a href="https://beian.miit.gov.cn/" target="blank">粤ICP备2024293672号-1</a>',
+			copyright: '©2024 Hello Jesho Ng!',
 		},
 		search: {
 			provider: 'local',

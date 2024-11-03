@@ -5,14 +5,14 @@ hero:
   name: 'JeSho Ng Docs'
   tagline: 无限进步 - To Be Coder!
   image:
-    src: /assets/background.png
+    src: /background.png
     alt: background
   actions:
     - theme: brand
       text: 简介
       link: /profile.md
     - theme: alt
-      text: 记录一些学习路线
+      text: 记录
       link: /docs.md
 features:
   - title: 🧩 文档
