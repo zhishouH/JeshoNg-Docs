@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 import { set_sidebar } from './utils/auto-generated-sidebars.mjs'
 
 export default defineConfig({
-	base: '/JeShoNg-Docs/',
+	// base: '/JeShoNg-Docs/',
 	srcDir: './src',
 	cleanUrls: true,
 	head: [['link', { rel: 'icon', href: './assets/logo.svg' }]],
