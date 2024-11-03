@@ -14,5 +14,5 @@
 }
 
 .image-bg[data-v-42d8124d] {
-	transform: translate(-50%, -50%) scale(0.75);
+	transform: translate(-50%, -50%) scale(0.75) !important;
 }
