@@ -59,8 +59,16 @@ export default defineConfig({
 			'/docs/sundries': {
 				collapsed: true,
 				items: [
-					{ text: '工具', items: set_sidebar('/docs/sundries/tools') },
-					{ text: '其他', items: set_sidebar('/docs/sundries/other') },
+					{
+						text: '工具',
+						collapsed: true,
+						items: set_sidebar('/docs/sundries/tools'),
+					},
+					{
+						text: '其他',
+						collapsed: true,
+						items: set_sidebar('/docs/sundries/other'),
+					},
 				],
 			},
 		},
