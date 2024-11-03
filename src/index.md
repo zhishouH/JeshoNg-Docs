@@ -12,7 +12,7 @@ hero:
       text: 简介
       link: /profile.md
     - theme: alt
-      text: 记录
+      text: 记录一些学习路线
       link: /docs.md
 features:
   - title: 🧩 文档

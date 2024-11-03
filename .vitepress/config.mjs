@@ -5,7 +5,7 @@ export default defineConfig({
 	base: '/JeShoNg-Docs/',
 	srcDir: './src',
 	cleanUrls: true,
-	head: [['link', { rel: 'icon', href: '/logo.svg' }]],
+	head: [['link', { rel: 'icon', href: './assets/logo.svg' }]],
 	title: 'JeSho Ng Docs',
 	description: 'JeSho Ng Docs',
 	themeConfig: {
