@@ -2,4 +2,4 @@
 
 html
 
-![aaa](/background.png)
+![aaa](/assets/background.png)
