@@ -2,14 +2,14 @@ import { defineConfig } from 'vitepress'
 import { set_sidebar } from './utils/auto-generated-sidebars.mjs'
 
 export default defineConfig({
-	// base: '/JeShoNg-Docs/',
+	base: '/JeShoNg-Docs/',
 	srcDir: './src',
 	cleanUrls: true,
-	head: [['link', { rel: 'icon', href: './assets/logo.svg' }]],
+	head: [['link', { rel: 'icon', href: './logo.svg' }]],
 	title: 'JeSho Ng Docs',
 	description: 'JeSho Ng Docs',
 	themeConfig: {
-		logo: '/assets/logo.svg',
+		logo: '/logo.svg',
 		outlineTitle: '文章目录',
 		outline: [2, 6],
 		nav: [
@@ -17,50 +17,50 @@ export default defineConfig({
 			{
 				text: '前端',
 				items: [
-					{ text: 'HTML', link: '/front-end/html/index.md' },
-					{ text: 'CSS', link: '/front-end/css/index.md' },
-					{ text: 'JavaScript', link: '/front-end/javascript/index.md' },
+					{ text: 'HTML', link: '/docs/front-end/html/index.md' },
+					{ text: 'CSS', link: '/docs/front-end/css/index.md' },
+					{ text: 'JavaScript', link: '/docs/front-end/javascript/index.md' },
 				],
 			},
 			{
 				text: '后端',
 				items: [
-					{ text: 'Node', link: '/back-end/node/index.md' },
-					{ text: 'MySQL', link: '/back-end/mysql/index.md' },
+					{ text: 'Node', link: '/docs/back-end/node/index.md' },
+					{ text: 'MySQL', link: '/docs/back-end/mysql/index.md' },
 				],
 			},
 			{
 				text: '框架',
 				items: [
-					{ text: 'Vue', link: '/frameworks/vue/index.md' },
-					{ text: 'React', link: '/frameworks/react/index.md' },
-					{ text: 'Express', link: '/frameworks/express/index.md' },
-					{ text: 'Koa', link: '/frameworks/koa/index.md' },
+					{ text: 'Vue', link: '/docs/frameworks/vue/index.md' },
+					{ text: 'React', link: '/docs/frameworks/react/index.md' },
+					{ text: 'Express', link: '/docs/frameworks/express/index.md' },
+					{ text: 'Koa', link: '/docs/frameworks/koa/index.md' },
 				],
 			},
 			{
 				text: '杂项',
 				items: [
-					{ text: '工具', link: '/sundries/tools/index.md' },
-					{ text: '其他', link: '/sundries/other/index.md' },
+					{ text: '工具', link: '/docs/sundries/tools/index.md' },
+					{ text: '其他', link: '/docs/sundries/other/index.md' },
 				],
 			},
 		],
 		sidebar: {
-			'/front-end/html': set_sidebar('/front-end/html'),
-			'/front-end/css': set_sidebar('/front-end/css'),
-			'/front-end/javascript': set_sidebar('/front-end/javascript'),
-			'/frameworks/vue': set_sidebar('frameworks/vue'),
-			'/frameworks/react': set_sidebar('/frameworks/react'),
-			'/frameworks/express': set_sidebar('/frameworks/express'),
-			'/frameworks/koa': set_sidebar('/frameworks/koa'),
-			'/back-end/node': set_sidebar('/back-end/node'),
-			'/back-end/mysql': set_sidebar('/back-end/mysql'),
-			'/sundries': {
+			'/docs/front-end/html': set_sidebar('/docs/front-end/html'),
+			'/docs/front-end/css': set_sidebar('/docs/front-end/css'),
+			'/docs/front-end/javascript': set_sidebar('/docs/front-end/javascript'),
+			'/docs/frameworks/vue': set_sidebar('/docs/frameworks/vue'),
+			'/docs/frameworks/react': set_sidebar('/docs/frameworks/react'),
+			'/docs/frameworks/express': set_sidebar('/docs/frameworks/express'),
+			'/docs/frameworks/koa': set_sidebar('/docs/frameworks/koa'),
+			'/docs/back-end/node': set_sidebar('/docs/back-end/node'),
+			'/docs/back-end/mysql': set_sidebar('/docs/back-end/mysql'),
+			'/docs/sundries': {
 				collapsed: true,
 				items: [
-					{ text: '工具', items: set_sidebar('/sundries/tools') },
-					{ text: '其他', items: set_sidebar('/sundries/other') },
+					{ text: '工具', items: set_sidebar('/docs/sundries/tools') },
+					{ text: '其他', items: set_sidebar('/docs/sundries/other') },
 				],
 			},
 		},
