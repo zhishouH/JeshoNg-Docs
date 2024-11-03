@@ -13,6 +13,6 @@
 	--vp-home-hero-image-filter: blur(68px);
 }
 
-.image-bg[data-v-42d8124d] {
+.VPHero .image-bg {
 	transform: translate(-50%, -50%) scale(0.75) !important;
 }
