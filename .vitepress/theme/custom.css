@@ -13,6 +13,18 @@
 	--vp-home-hero-image-filter: blur(68px);
 }
 
+@media (min-width: 768px) {
+	.VPHome {
+		margin-bottom: 0 !important;
+		padding-bottom: 0 !important;
+	}
+
+	.VPHero {
+		padding-top: 180px !important;
+		padding-bottom: 70px !important;
+	}
+}
+
 .VPHero .image-bg {
 	transform: translate(-50%, -50%) scale(0.75) !important;
 }
