@@ -16,7 +16,7 @@ export default defineConfig({
 			{
 				text: '前端',
 				items: [
-					{ text: 'HTML', link: '/docs/front-end/html/index.md' },
+					{ text: 'HTML', link: '/docs/front-end/html/1-初识Html.md' },
 					{ text: 'CSS', link: '/docs/front-end/css/index.md' },
 					{ text: 'JavaScript', link: '/docs/front-end/javascript/index.md' },
 				],
