@@ -3,7 +3,7 @@ import fs from 'node:fs'
 
 // 文件根目录
 // const DIR_PATH = path.resolve()
-const DIR_PATH = path.join(path.resolve(), 'src')
+const DIR_PATH = path.resolve()
 
 // 白名单,过滤不是文章的文件和文件夹
 const WHITE_LIST = ['.vitepress', 'node_modules', '.idea', 'assets']

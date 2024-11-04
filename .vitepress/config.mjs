@@ -3,7 +3,6 @@ import { set_sidebar } from './utils/auto-generated-sidebars.mjs'
 
 export default defineConfig({
 	base: '/JeShoNg-Docs/',
-	srcDir: './src',
 	cleanUrls: true,
 	head: [['link', { rel: 'icon', href: './logo.svg' }]],
 	title: 'JeSho Ng Docs',
@@ -98,4 +97,3 @@ export default defineConfig({
 		},
 	},
 })
-
