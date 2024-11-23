@@ -41,7 +41,7 @@ export default defineConfig({
 				text: '杂项',
 				items: [
 					{ text: '工具', link: '/docs/sundries/tools/index.md' },
-					{ text: '其他', link: '/docs/sundries/other/index.md' },
+					{ text: '其他', link: '/docs/sundries/other/1-纯css实现无缝滚动.md' },
 				],
 			},
 		],
@@ -97,3 +97,4 @@ export default defineConfig({
 		},
 	},
 })
+
