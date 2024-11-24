@@ -6,7 +6,7 @@
 
 ## html
 
-- 准备两个`.box`容器 1
+- 准备两个`.box`容器
 
 ```html
 <div class="wrap">
@@ -29,7 +29,7 @@
 
 - 使用`@keyframes`动画将内容从右向左连续移动，形成无缝衔接的视觉效果
 
-```css
+```css {13,18,34-42}
 .wrap {
 	width: 1060px;
 	display: flex;
