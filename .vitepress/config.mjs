@@ -3,7 +3,7 @@ import { set_sidebar } from './utils/auto-generated-sidebars.mjs'
 import markdownItCustomAttrs from 'markdown-it-custom-attrs'
 
 export default defineConfig({
-	base: '/JeShoNg-Docs/',
+	base: '/JeshoNg-Docs/',
 	cleanUrls: true,
 	head: [
 		['link', { rel: 'icon', href: './logo.svg' }],
