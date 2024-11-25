@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: 'JeSho Ng Docs'
+  name: 'Jesho Ng Docs'
   tagline: 无限进步 - To Be Coder!
   image:
     src: /background.png

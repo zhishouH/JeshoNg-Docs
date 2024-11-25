@@ -21,8 +21,8 @@ export default defineConfig({
 			},
 		],
 	],
-	title: 'JeSho Ng Docs',
-	description: 'JeSho Ng Docs',
+	title: 'Jesho Ng Docs',
+	description: 'Jesho Ng Docs',
 	themeConfig: {
 		logo: '/logo.svg',
 		outlineTitle: '文章目录',
