@@ -27,7 +27,7 @@
 
 :::
 
-## 边缘虚化
+### 1、边缘虚化
 
 - 使用 `mask-image` 属性作为元素蒙版层的图像，[蒙版层文档](https://developer.mozilla.org/zh-CN/docs/Web/CSS/mask-image)，
 - 使用 `radial-gradient` (径向渐变)实现
@@ -60,7 +60,7 @@
 
 :::
 
-## 四周线性渐变
+### 2、四周渐变
 
 - 使用 `background-size` 控制网格间隙大小
 
@@ -93,7 +93,7 @@
 
 :::
 
-## 网状点阵背景
+## 网状点阵
 
 - 使用 `radial-gradient` 函数，创建圆形填充背景色
 - 使用 `background-size` 控制网格间隙大小
