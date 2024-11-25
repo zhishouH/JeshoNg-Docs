@@ -119,6 +119,33 @@
 
 :::
 
-## 工具
+## 格子花纹
+
+![image-20240131182111821](/public/sundries/纯css网格背景-格子花纹.png)
+
+::: code-group
+
+```html [grid.html]
+<div class="grid"></div>
+```
+
+```css [grid.css]
+.grid {
+	height: 500px;
+	width: 200px;
+	background-image: linear-gradient(45deg, #8d8b8b 25%, transparent 0),
+		linear-gradient(-45deg, #8d8b8b 25%, transparent 0), linear-gradient(
+			45deg,
+			transparent 75%,
+			#8d8b8b 0
+		), linear-gradient(-45deg, transparent 75%, #8d8b8b 0);
+	background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+	background-size: 20px 20px;
+}
+```
+
+:::
+
+## 工具生成
 
 <grid-background-generator/>
