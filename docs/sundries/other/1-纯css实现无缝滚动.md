@@ -1,14 +1,14 @@
 # 纯 css 实现无缝滚动
 
-## 示意图：
-
 ![image-20240131182111821](/public/sundries/纯css无缝滚动示意图.jpg)
 
-## html
+- 准备两个 `.box` 容器
+- 使用 `@keyframes` 动画将内容从右向左连续移动，形成无缝衔接的视觉效果
+- 使用 `animation-play-state: paused;` 停止动画执行
 
-- 准备两个`.box`容器
+:::code-group
 
-```html
+```html [move.html]
 <div class="wrap">
 	<div class="box">
 		<div class="box-item">item1</div>
@@ -25,11 +25,7 @@
 </div>
 ```
 
-## css
-
-- 使用`@keyframes`动画将内容从右向左连续移动，形成无缝衔接的视觉效果
-
-```css {13,18,34-42}
+```css [move.css]
 .wrap {
 	width: 1060px;
 	display: flex;
@@ -45,7 +41,6 @@
 	animation: move 10s linear infinite;
 }
 
-/* 鼠标移入取消动画滚动 */
 .wrap:hover .box {
 	animation-play-state: paused;
 }
@@ -74,3 +69,4 @@
 }
 ```
 
+:::
