@@ -28,3 +28,7 @@
 .VPHero .image-bg {
 	transform: translate(-50%, -50%) scale(0.75) !important;
 }
+
+.VPFooter {
+	padding: 16px !important;
+}
