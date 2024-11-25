@@ -1,10 +1,15 @@
 import { defineConfig } from 'vitepress'
 import { set_sidebar } from './utils/auto-generated-sidebars.mjs'
+import markdownItCustomAttrs from 'markdown-it-custom-attrs'
 
 export default defineConfig({
 	base: '/JeShoNg-Docs/',
 	cleanUrls: true,
-	head: [['link', { rel: 'icon', href: './logo.svg' }]],
+	head: [
+		['link', { rel: 'icon', href: './logo.svg' }],
+		['link', { rel: 'stylesheet', href: './assets/fancybox.css' }],
+		['script', { src: './assets/fancybox.js' }],
+	],
 	title: 'JeSho Ng Docs',
 	description: 'JeSho Ng Docs',
 	themeConfig: {
@@ -101,6 +106,10 @@ export default defineConfig({
 		image: {
 			lazyLoading: true,
 		},
+		config: md => {
+			md.use(markdownItCustomAttrs, 'image', {
+				'data-fancybox': 'gallery',
+			})
+		},
 	},
 })
-

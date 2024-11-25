@@ -129,5 +129,4 @@
 
 ## 工具
 
-<GridBackgroundGenerator/>
-
+<grid-background-generator/>
