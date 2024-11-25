@@ -7,8 +7,22 @@ export default defineConfig({
 	cleanUrls: true,
 	head: [
 		['link', { rel: 'icon', href: './logo.svg' }],
-		['link', { rel: 'stylesheet', href: './assets/fancybox.css' }],
-		['script', { src: './assets/fancybox.js' }],
+		// ['link', { rel: 'stylesheet', href: './assets/fancybox.css' }],
+
+		// ['script', { src: './assets/fancybox.js' }],
+		[
+			'link',
+			{
+				rel: 'stylesheet',
+				href: 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css',
+			},
+		],
+		[
+			'script',
+			{
+				src: 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js',
+			},
+		],
 	],
 	title: 'JeSho Ng Docs',
 	description: 'JeSho Ng Docs',
