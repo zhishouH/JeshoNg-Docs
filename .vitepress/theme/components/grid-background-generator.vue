@@ -205,7 +205,7 @@
 					height: 28px;
 					width: 28px;
 					border: 2px solid transparent;
-					border-radius: 5px;
+					border-radius: 8px;
 					opacity: 0;
 				}
 
