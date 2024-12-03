@@ -11,7 +11,6 @@
 	"dependencies": {
 		"@algolia/client-search": "^4.9.1",
 		"markdown-it-custom-attrs": "^1.0.2",
-		"search-insights": "^1.0.0",
-		"vue-color": "^2.8.1"
+		"search-insights": "^1.0.0"
 	}
 }

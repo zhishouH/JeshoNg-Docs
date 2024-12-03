@@ -1,5 +1,5 @@
 <script setup>
-	import { ref } from 'vue'
+	import { ref, onMounted } from 'vue'
 
 	/* 模式选择处理 */
 	const currentModeIndex = ref(1)
@@ -34,11 +34,12 @@
 		currnetDefaultColor.value = color
 	}
 
-	const color = ref('')
+	const gradientRadius = ref(1)
 </script>
 
 <template>
 	<div class="grid-background-generator">
+		<div class="grid"></div>
 		<div class="select-mode">
 			<template
 				v-for="item in modeData"
@@ -58,7 +59,6 @@
 			<input
 				class="line-width_input"
 				type="range"
-				name="lineWidth"
 				id="line-width_input"
 				min="0"
 				max="10"
@@ -72,7 +72,6 @@
 			<input
 				class="grid-size_input"
 				type="range"
-				name="lineWidth"
 				id="grid-size_input"
 				min="0"
 				max="10"
@@ -81,7 +80,7 @@
 			<span>10px</span>
 		</div>
 		<div class="line-color">
-			<label for="grid-size_input">线条颜色：</label>
+			<label for="line-color_input">线条颜色：</label>
 			<div class="default-color">
 				<template
 					v-for="item in defaultLineColor"
@@ -102,12 +101,40 @@
 					</div>
 				</template>
 			</div>
+			<div class="select-color">
+				<input
+					type="color"
+					class="select-color_choose"
+					v-model="currnetDefaultColor"
+				/>
+				<input
+					type="text"
+					class="select-color_input"
+					id="line-color_input"
+					v-model="currnetDefaultColor"
+				/>
+			</div>
+		</div>
+		<div class="mask">
 			<input
-				type="color"
-				v-model="currnetDefaultColor"
+				class="mask-input"
+				type="checkbox"
+				id="mask-input"
 			/>
-			<sketch-picker v-model="color" />
-			{{ currnetDefaultColor }}
+			<label for="mask-input">是否显示边缘遮罩</label>
+		</div>
+		<div class="gradient-radius">
+			<label for="gradient-radius_input">渐变半径： </label>
+			<span>10px</span>
+			<input
+				class="gradient-radius_input"
+				type="range"
+				id="gradient-radius_input"
+				min="10"
+				max="200"
+				v-model="gradientRadius"
+			/>
+			<span>200px</span>
 		</div>
 	</div>
 </template>
@@ -126,46 +153,41 @@
 			padding: 4px 24px;
 			border-radius: 8px;
 			font-weight: bold;
-			color: #3451b2;
-			border: 2px solid #3451b2;
+			color: $color;
+			border: 2px solid $color;
 			cursor: pointer;
 			transition: color 200ms, background-color 200ms;
 			user-select: none;
 
 			&.is-active {
 				color: #fff;
-				background-color: #233f9b;
+				background-color: $color-hover;
 			}
 		}
 	}
 
-	/* 线条宽度与网格大小 */
+	/* 线条宽度\网格大小\渐变半径 */
 	.line-width,
-	.grid-size {
+	.grid-size,
+	.gradient-radius {
 		display: flex;
 		align-items: center;
 		margin-bottom: 20px;
 
-		label {
-			font-weight: bold;
-		}
-
 		&_input {
 			height: 2px;
-			accent-color: #3451b2;
+			accent-color: $color;
 			cursor: pointer;
 		}
 	}
 
 	/* 线条颜色 */
 	.line-color {
-		label {
-			font-weight: bold;
-		}
+		margin-bottom: 20px;
 
 		.default-color {
 			display: flex;
-			margin: 10px 0;
+			margin: 20px 0;
 			gap: 15px;
 
 			&_item {
@@ -193,6 +215,48 @@
 					}
 				}
 			}
+		}
+
+		.select-color {
+			display: flex;
+			gap: 15px;
+
+			&_input {
+				width: 70px;
+				border-bottom: 1px solid #ccc;
+
+				&:focus {
+					border-color: $color-hover;
+				}
+			}
+		}
+	}
+
+	/* 是否显示遮罩层 */
+	.mask {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin-bottom: 20px;
+
+		&-input {
+			accent-color: $color;
+		}
+	}
+
+	.line-width,
+	.grid-size,
+	.line-color,
+	.mask,
+	.gradient-radius {
+		box-shadow: 0 0 1px 1px #eee;
+		padding: 20px;
+		border-radius: 10px;
+
+		label {
+			font-weight: bold;
+			cursor: pointer;
+			user-select: none;
 		}
 	}
 </style>
