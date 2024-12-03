@@ -1,5 +1,5 @@
 <script setup>
-	import { ref, onMounted } from 'vue'
+	import { ref, onMounted, computed } from 'vue'
 
 	/* 模式选择处理 */
 	const currentModeIndex = ref(1)
@@ -35,11 +35,24 @@
 	}
 
 	const gradientRadius = ref(1)
+
+	const gridCss = computed(() => {
+		return {
+			'background-size': '28px 28px',
+			'background-position': 'center center',
+			'background-image': `linear-gradient(to right, #cbd5e1 1px, transparent 1px),	linear-gradient(to bottom, #cbd5e1 1px, transparent 1px)`,
+			'mask-image': `linear-gradient(to bottom, transparent, #fff 50px calc(100% - 50px), transparent),linear-gradient(to right, transparent, #fff 50px calc(100% - 50px), transparent);`,
+			'mask-composite': 'intersect',
+		}
+	})
 </script>
 
 <template>
 	<div class="grid-background-generator">
-		<div class="grid"></div>
+		<div
+			class="grid"
+			:style="gridCss"
+		></div>
 		<div class="select-mode">
 			<template
 				v-for="item in modeData"
@@ -164,6 +177,12 @@
 				background-color: $color-hover;
 			}
 		}
+	}
+
+	.grid {
+		width: 100%;
+		height: 200px;
+		margin: 0 0 20px;
 	}
 
 	/* 线条宽度\网格大小\渐变半径 */
