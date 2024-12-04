@@ -146,10 +146,6 @@
 
 :::
 
-```css
-asd
-```
-
 ## 工具生成
 
 <grid-background-generator/>

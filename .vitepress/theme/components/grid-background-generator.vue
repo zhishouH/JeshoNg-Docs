@@ -16,7 +16,7 @@
 	const lineWidth = ref(1)
 
 	/* 网格大小 */
-	const gridSize = ref(1)
+	const gridSize = ref(10)
 
 	/* 线条颜色 */
 	const defaultLineColor = ref([
@@ -37,13 +37,25 @@
 	const gradientRadius = ref(1)
 
 	const gridCss = computed(() => {
-		return {
-			'background-size': '28px 28px',
-			'background-position': 'center center',
-			'background-image': `linear-gradient(to right, #cbd5e1 1px, transparent 1px),	linear-gradient(to bottom, #cbd5e1 1px, transparent 1px)`,
-			'mask-image': `linear-gradient(to bottom, transparent, #fff 50px calc(100% - 50px), transparent),linear-gradient(to right, transparent, #fff 50px calc(100% - 50px), transparent);`,
-			'mask-composite': 'intersect',
+		let css = {}
+		switch (currentModeIndex.value) {
+			case 1: {
+				css = {
+					'background-size': `${gridSize.value}px ${gridSize.value}px`,
+					'background-position': 'center center',
+					'background-image': `linear-gradient(to right, #cbd5e1 ${lineWidth.value}px, transparent ${lineWidth.value}px),	linear-gradient(to bottom, #cbd5e1 ${lineWidth.value}px, transparent ${lineWidth.value}px)`,
+					'mask-image':
+						'linear-gradient(to bottom, transparent, #fff 50px calc(100% - 50px), transparent),linear-gradient(to right, transparent, #fff 50px calc(100% - 50px), transparent)',
+					'mask-composite': 'intersect',
+				}
+			}
+			case 2: {
+			}
+			case 3: {
+			}
+			default:
 		}
+		return css
 	})
 </script>
 
@@ -67,7 +79,7 @@
 			</template>
 		</div>
 		<div class="line-width">
-			<label for="line-width_input">线条宽度：</label>
+			<label for="line-width_input">线条宽度({{ lineWidth }}px)：</label>
 			<span>1px</span>
 			<input
 				class="line-width_input"
@@ -80,17 +92,17 @@
 			<span>10px</span>
 		</div>
 		<div class="grid-size">
-			<label for="grid-size_input">网格大小：</label>
+			<label for="grid-size_input">网格大小({{ gridSize }}px)：</label>
 			<span>1px</span>
 			<input
 				class="grid-size_input"
 				type="range"
 				id="grid-size_input"
-				min="0"
-				max="10"
+				min="1"
+				max="100"
 				v-model="gridSize"
 			/>
-			<span>10px</span>
+			<span>100px</span>
 		</div>
 		<div class="line-color">
 			<label for="line-color_input">线条颜色：</label>
@@ -276,6 +288,12 @@
 			font-weight: bold;
 			cursor: pointer;
 			user-select: none;
+		}
+
+		.current-value {
+			display: inline-block;
+			font-weight: bold;
+			padding-left: 50px;
 		}
 	}
 </style>
