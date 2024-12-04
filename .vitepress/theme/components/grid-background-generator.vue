@@ -48,10 +48,13 @@
 						'linear-gradient(to bottom, transparent, #fff 50px calc(100% - 50px), transparent),linear-gradient(to right, transparent, #fff 50px calc(100% - 50px), transparent)',
 					'mask-composite': 'intersect',
 				}
+				break
 			}
 			case 2: {
+				break
 			}
 			case 3: {
+				break
 			}
 			default:
 		}
