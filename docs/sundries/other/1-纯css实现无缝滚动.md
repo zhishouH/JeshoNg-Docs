@@ -6,38 +6,55 @@
 - 使用 `@keyframes` 动画将内容从右向左连续移动，形成无缝衔接的视觉效果
 - 使用 `animation-play-state: paused;` 停止动画执行
 
+**效果展示**
+<auto-scoll/>
+
 :::code-group
 
 ```html [move.html]
 <div class="wrap">
 	<div class="box">
-		<div class="box-item">item1</div>
-		<div class="box-item">item2</div>
-		<div class="box-item">item3</div>
-		<div class="box-item">item4</div>
+		<div class="box-item">
+			<div class="box-item_inner">item1</div>
+		</div>
+		<div class="box-item">
+			<div class="box-item_inner">item2</div>
+		</div>
+		<div class="box-item">
+			<div class="box-item_inner">item3</div>
+		</div>
+		<div class="box-item">
+			<div class="box-item_inner">item4</div>
+		</div>
 	</div>
 	<div class="box">
-		<div class="box-item">item1</div>
-		<div class="box-item">item2</div>
-		<div class="box-item">item3</div>
-		<div class="box-item">item4</div>
+		<div class="box-item">
+			<div class="box-item_inner">item1</div>
+		</div>
+		<div class="box-item">
+			<div class="box-item_inner">item2</div>
+		</div>
+		<div class="box-item">
+			<div class="box-item_inner">item3</div>
+		</div>
+		<div class="box-item">
+			<div class="box-item_inner">item4</div>
+		</div>
 	</div>
 </div>
 ```
 
 ```css [move.css]
 .wrap {
-	width: 1060px;
+	width: 688px;
 	display: flex;
-	gap: 20px;
-	margin: 100px auto;
 	overflow: hidden;
+	margin: 0 auto;
 }
 
 .box {
 	width: 100%;
 	display: flex;
-	gap: 20px;
 	animation: move 10s linear infinite;
 }
 
@@ -46,16 +63,23 @@
 }
 
 .box-item {
-	width: 250px;
-	height: 200px;
+	flex-shrink: 0;
+	width: 172px;
+	height: 100px;
+	padding: 10px;
+}
+
+.box-item_inner {
+	width: 100%;
+	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: tomato;
 	border-radius: 10px;
 	font-weight: bold;
 	font-size: 24px;
 	color: #fff;
+	background-color: tomato;
 }
 
 @keyframes move {
@@ -70,3 +94,4 @@
 ```
 
 :::
+
