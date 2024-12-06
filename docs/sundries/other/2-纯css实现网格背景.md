@@ -131,8 +131,8 @@
 
 ```css [grid.css]
 .grid {
-	height: 500px;
-	width: 200px;
+	width: 500px;
+	height: 200px;
 	background-image: linear-gradient(45deg, #8d8b8b 25%, transparent 0),
 		linear-gradient(-45deg, #8d8b8b 25%, transparent 0), linear-gradient(
 			45deg,
@@ -148,4 +148,116 @@
 
 ## 工具生成
 
-<grid-background-generator/>
+<grid-background-generator @returnGridCss="handleGridCss"/>
+
+<script setup>
+	import { ref } from "vue"
+
+	const gridCss = ref({})
+
+	const size = ref(10)
+	const handleGridCss = (e) => {
+		gridCss.value = e
+		console.log(1, e)
+	}
+
+	
+
+</script>
+
+<div v-if="gridCss.currentModeIndex === 1 && gridCss.isShowMask">
+
+```css-vue
+.grid {
+	width: 500px;
+	height: 200px;
+	background-size: {{ gridCss.gridSize }}px {{ gridCss.gridSize }}px;
+	background-position: center center;
+	background-image: linear-gradient(to right, {{ gridCss.currnetColor }} {{ gridCss.lineWidth }}px, transparent {{ gridCss.lineWidth }}px),	linear-gradient(to bottom, {{ gridCss.currnetColor }} {{ gridCss.lineWidth }}px, transparent {{ gridCss.lineWidth }}px);
+	mask-image: linear-gradient(to bottom, transparent, #fff {{gridCss.gradientRadius}}px calc(100% - {{gridCss.gradientRadius}}px), transparent),
+            linear-gradient(to right, transparent, #fff {{gridCss.gradientRadius}}px calc(100% - {{gridCss.gradientRadius}}px));
+	mask-composite: intersect;
+}
+```
+
+</div>
+
+<div v-if="gridCss.currentModeIndex === 1 && !gridCss.isShowMask">
+
+```css-vue
+.grid {
+	width: 500px;
+	height: 200px;
+	background-size: {{ gridCss.gridSize }}px {{ gridCss.gridSize }}px;
+	background-position: center center;
+	background-image: linear-gradient(to right, {{ gridCss.currnetColor }} {{ gridCss.lineWidth }}px, transparent {{ gridCss.lineWidth }}px),	linear-gradient(to bottom, {{ gridCss.currnetColor }} {{ gridCss.lineWidth }}px, transparent {{ gridCss.lineWidth }}px);
+}
+```
+
+</div>
+
+<div v-if="gridCss.currentModeIndex === 2 && gridCss.isShowMask">
+
+```css-vue
+.grid {
+	width: 500px;
+	height: 200px;
+	background-size: {{ gridCss.gridSize }}px {{ gridCss.gridSize }}px;
+	background-position: center center;
+	background-image: radial-gradient(circle, {{ gridCss.currnetColor}} {{ gridCss.lineWidth }}px, #fff {{ gridCss.lineWidth }}px);
+	mask-image: linear-gradient(to bottom, transparent, #fff {{gridCss.gradientRadius}}px calc(100% - {{gridCss.gradientRadius}}px), transparent),
+            linear-gradient(to right, transparent, #fff {{gridCss.gradientRadius}}px calc(100% - {{gridCss.gradientRadius}}px));
+	mask-composite: intersect;
+}
+```
+
+</div>
+
+<div v-if="gridCss.currentModeIndex === 2 && !gridCss.isShowMask">
+
+```css-vue
+.grid {
+	width: 500px;
+	height: 200px;
+	background-size: {{ gridCss.gridSize }}px {{ gridCss.gridSize }}px;
+	background-position: center center;
+	background-image: radial-gradient(circle, {{ gridCss.currnetColor}} {{ gridCss.lineWidth }}px, #fff {{ gridCss.lineWidth }}px);
+}
+```
+
+</div>
+
+<div v-if="gridCss.currentModeIndex === 3 && gridCss.isShowMask">
+
+```css-vue
+.grid {
+	width: 500px;
+	height: 200px;
+	background-size: {{ gridCss.gridSize }}px {{ gridCss.gridSize }}px;
+	background-position: 0 0, 0 {{ gridCss.gridSize / 2 }}px,
+						{{ gridCss.gridSize / 2 }}px -{{ gridCss.gridSize / 2 }}px,
+						-{{ gridCss.gridSize / 2 }}px 0;
+	background-image: linear-gradient(45deg, {{ gridCss.currnetColor }} 25%, transparent 0),	linear-gradient(-45deg, {{ gridCss.currnetColor }} 25%, transparent 0), linear-gradient(45deg, transparent 75%, {{ gridCss.currnetColor }} 0), linear-gradient(-45deg, transparent 75%, {{ gridCss.currnetColor }} 0);
+	mask-image: linear-gradient(to bottom, transparent, #fff {{gridCss.gradientRadius}}px calc(100% - {{gridCss.gradientRadius}}px), transparent), linear-gradient(to right, transparent, #fff {{gridCss.gradientRadius}}px calc(100% - {{gridCss.gradientRadius}}px), transparent);
+	mask-composite: intersect;
+}
+```
+
+</div>
+
+<div v-if="gridCss.currentModeIndex === 3 && !gridCss.isShowMask">
+
+```css-vue
+.grid {
+	width: 500px;
+	height: 200px;
+	background-size: {{ gridCss.gridSize }}px {{ gridCss.gridSize }}px;
+	background-position: 0 0, 0 {{ gridCss.gridSize / 2 }}px,
+						{{ gridCss.gridSize / 2 }}px -{{ gridCss.gridSize / 2 }}px,
+						-{{ gridCss.gridSize / 2 }}px 0;
+	background-image: linear-gradient(45deg, {{ gridCss.currnetColor }} 25%, transparent 0),	linear-gradient(-45deg, {{ gridCss.currnetColor }} 25%, transparent 0), linear-gradient(45deg, transparent 75%, {{ gridCss.currnetColor }} 0), linear-gradient(-45deg, transparent 75%, {{ gridCss.currnetColor }} 0);
+}
+```
+
+</div>
+

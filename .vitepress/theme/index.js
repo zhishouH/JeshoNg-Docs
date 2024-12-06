@@ -10,3 +10,4 @@ export default {
 		app.component('grid-background-generator', GridBackgroundGenerator)
 	},
 }
+
