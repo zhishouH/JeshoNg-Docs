@@ -35,13 +35,14 @@
 
 <style lang="scss" scoped>
 	.wrap {
-		width: 688px;
+		width: 100%;
 		display: flex;
 		overflow: hidden;
 		margin: 0 auto;
 	}
 
 	.box {
+		flex-shrink: 0;
 		width: 100%;
 		display: flex;
 		animation: move 10s linear infinite;
@@ -53,7 +54,7 @@
 
 	.box-item {
 		flex-shrink: 0;
-		width: 172px;
+		width: 25%;
 		height: 100px;
 		padding: 10px;
 	}
@@ -81,4 +82,3 @@
 		}
 	}
 </style>
-
