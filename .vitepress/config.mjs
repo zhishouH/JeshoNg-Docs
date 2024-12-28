@@ -33,24 +33,33 @@ export default defineConfig({
 				text: '前端',
 				items: [
 					{ text: 'HTML', link: '/docs/front-end/html/1-初识Html.md' },
-					{ text: 'CSS', link: '/docs/front-end/css/index.md' },
-					{ text: 'JavaScript', link: '/docs/front-end/javascript/index.md' },
+					{ text: 'CSS', link: '/docs/front-end/css/1-初识CSS.md' },
+					{
+						text: 'JavaScript',
+						link: '/docs/front-end/javascript/1-初识JavaScript.md',
+					},
+					{
+						text: 'TypeScript',
+						link: '/docs/front-end/typescript/初识TypeScript.md',
+					},
 				],
 			},
 			{
 				text: '后端',
 				items: [
-					{ text: 'Node', link: '/docs/back-end/node/index.md' },
-					{ text: 'MySQL', link: '/docs/back-end/mysql/index.md' },
+					{ text: 'Node', link: '/docs/back-end/node/1-常见模块.md' },
+					{ text: 'MySQL', link: '/docs/back-end/mysql/1-初识MySQL.md' },
 				],
 			},
 			{
 				text: '框架',
 				items: [
-					{ text: 'Vue', link: '/docs/frameworks/vue/index.md' },
+					{ text: 'Vue', link: '/docs/frameworks/vue/项目搭建流程.md' },
+					{ text: 'UniApp', link: '/docs/frameworks/uni-app/1-基础语法.md' },
 					{ text: 'React', link: '/docs/frameworks/react/index.md' },
 					{ text: 'Express', link: '/docs/frameworks/express/index.md' },
 					{ text: 'Koa', link: '/docs/frameworks/koa/index.md' },
+					{ text: 'Shopify', link: '/docs/frameworks/shopify/1-开发流程.md' },
 				],
 			},
 			{
@@ -65,10 +74,13 @@ export default defineConfig({
 			'/docs/front-end/html': set_sidebar('/docs/front-end/html'),
 			'/docs/front-end/css': set_sidebar('/docs/front-end/css'),
 			'/docs/front-end/javascript': set_sidebar('/docs/front-end/javascript'),
+			'/docs/front-end/typescript': set_sidebar('/docs/front-end/typescript'),
 			'/docs/frameworks/vue': set_sidebar('/docs/frameworks/vue'),
+			'/docs/frameworks/uni-app': set_sidebar('/docs/frameworks/uni-app'),
 			'/docs/frameworks/react': set_sidebar('/docs/frameworks/react'),
 			'/docs/frameworks/express': set_sidebar('/docs/frameworks/express'),
 			'/docs/frameworks/koa': set_sidebar('/docs/frameworks/koa'),
+			'/docs/frameworks/shopify': set_sidebar('/docs/frameworks/shopify'),
 			'/docs/back-end/node': set_sidebar('/docs/back-end/node'),
 			'/docs/back-end/mysql': set_sidebar('/docs/back-end/mysql'),
 			'/docs/sundries': {
