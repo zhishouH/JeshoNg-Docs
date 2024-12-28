@@ -257,7 +257,7 @@
 - scrollLeft: 滚动部分的宽度
 - scrollTop: 滚动部分的宽度
 
-​ ![image-20240204145634058](./assets/image-20240204145634058.png)
+![image-20240204145634058](/front-end/javascript/image-20240204145634058.png)
 
 ```html
 <style>
