@@ -153,7 +153,7 @@
 - `before`: 在 node 后面插入节点或字符串
 - `replaceWith`: 将 node 替换为给定的节点或字符串
 
-  ![image-20240204144944980](./assets/image-20240204144944980.png)
+![image-20240204144944980](/front-end/javascript/image-20240204144944980.png)
 
 ```html
 <div class="box">
