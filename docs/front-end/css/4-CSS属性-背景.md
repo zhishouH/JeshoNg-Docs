@@ -60,8 +60,7 @@ background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
 ## 6、background
 
 背景相关属性的简写属性；
-
-<img src="./assets/image-20240201181731287.png" alt="image-20240201181731287" style="float: left"/>
+![image-20240201181731287](/front-end/css/image-20240201181731287.png)
 
 background-size 可以省略，如果不省略，/background-size 必须紧跟在 background-position 的后面；
 
