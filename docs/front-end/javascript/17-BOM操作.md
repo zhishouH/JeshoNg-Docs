@@ -38,7 +38,7 @@ console.log(globalThis)
 console.log(window === globalThis)
 ```
 
-![image-20240204154236895](./assets/image-20240204154236895.png)
+![image-20240204154236895](/front-end/javascript/image-20240204154236895.png)
 
 ### 常见属性
 
